@@ -1,0 +1,19 @@
+<template name="newProduct">
+  {{#ionModal customTemplate=true}}
+    {{# autoForm collection="Products" id="products-new-form" type="insert"}}
+      <div class="bar bar-header bar-stable">
+        <button data-dismiss="modal" type="button" class="button button-clear">取消</button>
+        <h2 class="title">新的商品</h2>
+        <button type="submit" class="button button-positive button-clear">发布</button>
+      </div>
+      <div class="content has-header overflow-scroll">
+        <!-- {{> afQuickField name="url" type="url"}} -->
+        {{> afQuickField name="name"}}
+        {{> afQuickField name="tagline"}}
+        <!-- 添加商品价格 -->
+        {{> afQuickField name="price"}}
+        {{> afQuickField name="seller"}}
+      </div>
+    {{/autoForm}}
+  {{/ionModal}}
+</template>

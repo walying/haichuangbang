@@ -1,0 +1,46 @@
+<!-- <template name="_productItem">
+  {{#with product}}
+    {{#ionItem path=../path iconLeft=true iconRight=true}}
+      {{> _voteButton}}
+      <h2>{{name}}</h2>
+      <p>
+        {{tagline}}
+      </p>
+      <span class="comments-count">
+        {{numberOfComments}}
+        {{> ionIcon icon="ios-chatbubble" }}
+      </span>
+    {{/ionItem}}
+  {{/with}}
+</template> -->
+<template name="_productItem">
+  {{#with product}}
+    {{#ionItem iconLeft=true iconRight=true}}
+      <!-- {{> _voteButton}} -->
+      <h2>{{name}}</h2>
+      <p>
+        {{tagline}}
+      </p>
+      <!-- {{#with author}}
+        <p>
+          <small>卖家：<a href="{{pathFor 'users.show'}}" class="dark">{{profile.name}}</a></small>
+        </p>
+      {{/with}} -->
+      <h2 class="product-title">
+        卖家：{{seller}}
+      </h2>
+      <h2 class="product-title">
+        售价：{{price}}
+      </h2>
+      <span class="comments-count">
+        {{numberOfComments}}
+        {{> ionIcon icon="ios-chatbubble" }}
+      </span>
+      {{/ionItem}}
+      {{#ionItem path=../path iconLeft=true iconRight=true}}
+      <button class="button pull-center button-positive">
+        我要购买
+      </button>
+    {{/ionItem}}
+  {{/with}}
+</template>
